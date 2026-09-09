@@ -1,0 +1,12 @@
+.DS_Store
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.obj
+*.fbx
+*.3dm
+*.dxf
+*.pdf
+.env*
+node_modules/
