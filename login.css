@@ -1,75 +1,45 @@
 :root{--bg:#efeee9;--ink:#26312d;--muted:#727972;--line:#d9dcd3;--green:#30493c;font-family:'Avenir Next',Avenir,'Helvetica Neue',sans-serif;color:var(--ink);font-synthesis:none}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1100px 620px at 8% -6%,#e2e8dc 0,transparent 62%),radial-gradient(900px 560px at 104% 108%,#eceadf 0,transparent 60%),var(--bg)}
-.page{min-height:100svh;max-width:1120px;margin:0 auto;padding:0 34px;display:flex;flex-direction:column}
-.masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 0 0}
-.collab{display:flex;align-items:center;gap:14px}
+body{margin:0;min-height:100svh;display:grid;place-items:center;padding:32px 20px;background:radial-gradient(1100px 620px at 8% -6%,#e2e8dc 0,transparent 62%),radial-gradient(900px 560px at 104% 108%,#eceadf 0,transparent 60%),var(--bg)}
+.page{width:100%;max-width:376px;display:flex;flex-direction:column;align-items:center;gap:18px}
+
+.card{width:100%;background:#fbfbf7;border:1px solid var(--line);border-radius:14px;padding:32px 30px 16px;box-shadow:0 20px 54px #26312d0f;text-align:center}
+.collab{display:flex;align-items:center;justify-content:center;gap:13px}
 .logo{display:flex;align-items:center;gap:9px}
-.logo .mark{height:28px;width:auto;display:block}
+.logo .mark{height:23px;width:auto;display:block}
 .hauptwerk{color:var(--ink)}
-.hauptwerk .word{height:17px;width:auto;display:block}
-.midnite .full{height:28px;width:auto;display:block}
+.hauptwerk .word{height:14px;width:auto;display:block}
+.midnite .full{height:22px;width:auto;display:block}
 .midnite .mark{display:none}
-.cross{color:#a5ac9f;font-size:15px}
-.tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#6c7568;border:1px solid var(--line);border-radius:999px;padding:6px 13px;white-space:nowrap}
+.cross{color:#a5ac9f;font-size:14px}
 
-.entry{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 392px;column-gap:64px;row-gap:36px;align-content:center;padding:52px 0}
-.intro{grid-column:1;grid-row:1;min-width:0}
-.eyebrow{font-size:11px;letter-spacing:2.2px;text-transform:uppercase;color:#7d8778;margin:0}
-h1{font-size:clamp(40px,4.6vw,56px);font-weight:500;letter-spacing:-1.8px;line-height:1.02;margin:16px 0 0}
-.tagline{font-size:18px;font-weight:500;color:var(--green);letter-spacing:-.3px;margin:14px 0 0}
-.lede{font-size:15px;line-height:1.72;color:#6b736a;margin:18px 0 0;max-width:44ch}
+.eyebrow{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#7d8778;margin:26px 0 0}
+h1{font-size:30px;font-weight:500;letter-spacing:-1px;line-height:1.1;margin:9px 0 26px}
 
-.points{grid-column:1;grid-row:2;list-style:none;margin:0;padding:26px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.points li{display:flex;flex-direction:column;gap:6px}
-.points strong{font-size:12.5px;font-weight:600}
-.points span{font-size:12px;line-height:1.5;color:#7c8479}
-
-.card{grid-column:2;grid-row:1/span 2;align-self:center;background:#fbfbf7;border:1px solid var(--line);border-radius:14px;padding:34px 32px 26px;box-shadow:0 20px 54px #26312d0f}
-.card h2{font-size:20px;font-weight:600;letter-spacing:-.4px;margin:0}
-.card-note{font-size:13px;line-height:1.6;color:#767e73;margin:9px 0 26px}
 label{display:block;font-size:12px;color:#5f685e;margin-bottom:8px}
 input,button{font:inherit;width:100%;border-radius:7px}
-input{border:1px solid #cdd3c8;background:#fff;height:47px;padding:12px 14px;font-size:16px;color:var(--ink)}
+input{border:1px solid #cdd3c8;background:#fff;height:47px;padding:12px 14px;font-size:16px;color:var(--ink);text-align:center}
 input:focus{outline:2px solid #718e76;outline-offset:1px}
-button{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;height:48px;padding:0 18px;background:var(--green);border:1px solid var(--green);color:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:background .16s}
+button{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;height:48px;padding:0 18px;background:var(--green);border:1px solid var(--green);color:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:background .16s}
 button svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
 button:hover{background:#253e30}
 button:focus-visible{outline:2px solid #718e76;outline-offset:3px}
 button:disabled{opacity:.6;cursor:wait}
-#unlock-status{min-height:30px;font-size:12px;line-height:1.5;margin:13px 0 0;color:#677662}
+/* Zwei Zeilen freihalten, sonst springt die zentrierte Maske bei einer Meldung. */
+#unlock-status{min-height:30px;font-size:12px;line-height:1.5;margin:12px 0 0;color:#677662}
 #unlock-status[data-error=true]{color:#94472c}
-.privacy{border-top:1px solid var(--line);margin:4px 0 0;padding-top:16px;font-size:11.5px;line-height:1.55;color:#868d7f}
 
-.colophon{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:20px 0 24px;font-size:11px;color:#8b9285}
+.note{margin:0;font-size:11px;color:#8b9285;text-align:center}
 
-@media(max-width:1060px){.entry{grid-template-columns:minmax(0,1fr) 356px;column-gap:44px}h1{letter-spacing:-1.4px}}
-@media(max-width:900px){
- .page{padding:0 26px}
- .entry{grid-template-columns:minmax(0,1fr);row-gap:30px;padding:38px 0}
- .intro,.card,.points{grid-column:1}
- .intro{grid-row:1}.card{grid-row:2}.points{grid-row:3}
- .card{padding:30px 26px 22px;max-width:520px}
- .lede{max-width:62ch}
- .points{grid-template-columns:1fr;gap:0;padding-top:6px;border-top:0}
- .points li{flex-direction:row;align-items:baseline;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
- .points strong{flex:0 0 116px}
+@media(max-width:430px){
+ body{padding:24px 16px}
+ .card{padding:26px 22px 14px}
+ h1{font-size:27px}
 }
-@media(max-width:600px){
- .page{padding:0 20px}
- .card{max-width:none}
- .masthead{padding-top:22px}
- .collab .word{display:none}
+/* Nur auf sehr schmalen Geraeten passt das volle Logopaar nicht mehr in die Karte. */
+@media(max-width:359px){
+ .hauptwerk .word{display:none}
  .midnite .full{display:none}
  .midnite .mark{display:block}
- .tag{font-size:9px;padding:5px 10px;letter-spacing:1.6px}
- .entry{padding:30px 0}
- h1{font-size:36px;letter-spacing:-1.2px}
- .tagline{font-size:16px}
- .lede{font-size:14px}
- .card{padding:26px 22px 20px}
- .points li{flex-direction:column;gap:5px}
- .points strong{flex:none}
- .colophon{flex-direction:column;align-items:flex-start;gap:4px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
