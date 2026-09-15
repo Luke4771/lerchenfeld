@@ -2,9 +2,9 @@
   "version": 1,
   "algorithm": "AES-256-GCM",
   "kdf": "PBKDF2-SHA-256",
-  "salt": "a+YhZOwmg0dV5fuZhPuct7xgL7A4r3s44aiy1gD1Zfk=",
+  "salt": "+fbl0BcB07GMkKaVDyadrj8QbAORFpE8icR+hyG1ABc=",
   "iterations": 600000,
-  "viewer": "assets/viewer-330645947449.js",
-  "scene": "assets/scene-49e0a624f49e.bin",
-  "view": "assets/view-e359063ff224.bin"
+  "viewer": "assets/viewer-0b6cc887f5d6.js",
+  "scene": "assets/scene-53f6e4cb5954.bin",
+  "view": "assets/view-08f6160caced.bin"
 }
