@@ -4,6 +4,8 @@ Interaktive, geschützte Büro-Vorschau für GitHub Pages.
 
 Nach Eingabe des separat geteilten Passworts lässt sich das Modell drehen, vergrößern und aus vier Blickwinkeln ansehen. Screenshots werden direkt als PNG heruntergeladen.
 
+Unter `#aufgaben` liegt eine gemeinsame Aufgabenliste für den Bezug des Büros. Alle, die das Passwort kennen, können sie bearbeiten; die Einträge liegen in einer kleinen Firebase-Datenbank, deren Adresse nur in der verschlüsselten Ansicht steht.
+
 ## Veröffentlichung
 
 GitHub Pages: Branch `main`, Ordner `/ (root)`. Die Website wird ohne Server und ohne Build auf GitHub betrieben. `.nojekyll` ist enthalten.
