@@ -4,7 +4,7 @@ Interaktive, geschützte Büro-Vorschau für GitHub Pages.
 
 Nach Eingabe des separat geteilten Passworts lässt sich das Modell drehen, vergrößern und aus vier Blickwinkeln ansehen. Screenshots werden direkt als PNG heruntergeladen.
 
-Unter `#aufgaben` liegt eine gemeinsame Aufgabenliste für den Bezug des Büros. Alle, die das Passwort kennen, können sie bearbeiten; die Einträge liegen in einer kleinen Firebase-Datenbank, deren Adresse nur in der verschlüsselten Ansicht steht.
+Unter `#aufgaben` liegt eine gemeinsame Aufgabenliste für den Bezug des Büros, unter `#einkauf` die Einkaufsliste für Netzwerk und Technik mit Summe. Alle, die das Passwort kennen, können beide bearbeiten; die Einträge liegen in einer kleinen Firebase-Datenbank, deren Adressen nur in der verschlüsselten Ansicht stehen.
 
 ## Veröffentlichung
 

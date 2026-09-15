@@ -4,8 +4,9 @@ const button=document.getElementById('unlock');
 const status=document.getElementById('unlock-status');
 const base=new URL('./',location.href);
 const bytes64=value=>Uint8Array.from(atob(value),c=>c.charCodeAt(0));
-// Ein Link auf #aufgaben führt nach der Eingabe direkt zur Aufgabenliste.
-if(location.hash==='#aufgaben'){button.querySelector('span').textContent='Aufgaben öffnen';document.title='Lerchenfelder · Aufgaben'}
+// Ein Link auf #aufgaben oder #einkauf führt nach der Eingabe direkt zur Liste.
+const target={'#aufgaben':['Aufgaben öffnen','Lerchenfelder · Aufgaben'],'#einkauf':['Einkaufsliste öffnen','Lerchenfelder · Einkaufsliste']}[location.hash];
+if(target){button.querySelector('span').textContent=target[0];document.title=target[1]}
 // release.json nennt die Dateinamen des aktuellen Standes. Ohne erneute
 // Rückfrage beim Server zeigt ein Browser bis zu zehn Minuten den alten Build.
 async function getFile(path,options){const r=await fetch(new URL(path,base),options);if(!r.ok)throw new Error('Die Vorschau ist gerade nicht erreichbar. Bitte versuche es erneut.');return r.arrayBuffer()}
